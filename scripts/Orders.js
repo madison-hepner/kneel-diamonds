@@ -1,6 +1,6 @@
 import { addCustomOrder, getOrders } from "./database.js"
 
-export const buildOrderListItem = () => {
+ export const buildOrderListItem = () => {
     const orders = getOrders()
     return `<li>
         Order #${orders.id} was placed on ${orders.timestamp}
@@ -8,15 +8,16 @@ export const buildOrderListItem = () => {
 }
 
 
+
 export const Orders = () => {
 
-    const orders = newOrder()
+    const orders = getOrders()
 
     let html = "<ul>"
 
-    const listItems1 = orders.map(orders => {
+    const listItems1 = orders.map(order => {
         `<li>
-        Order #${orders.id} was placed on ${orders.timestamp}
+        Order #${order.id} was placed on ${order.timestamp}
     </li>`
     }
     )
