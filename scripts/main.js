@@ -13,4 +13,3 @@ document.addEventListener("stateChanged", event => {
     renderAllHTML()
 })
 
-document.dispatchEvent(new CustomEvent("stateChanged"))

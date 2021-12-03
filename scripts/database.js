@@ -6,6 +6,8 @@
 
 */
 const database = {
+    orderBuilder: {},
+    
     styles: [
         { id: 1, style: "Classic", price: 500 },
         { id: 2, style: "Modern", price: 710 },
@@ -33,23 +35,22 @@ const database = {
             styleId: 3,
             timestamp: 1614659931693
         }
-    ],
-    orderBuilder: { }
+    ]
         
 }
 
 
 
 export let setMetal = (id) => {
-    database.customOrders.metalId = id
+    database.orderBuilder.metalId = id
 }
 
 export let setSize = (id) => {
-    database.customOrders.sizeId = id
+    database.orderBuilder.sizeId = id
 }
 
 export let setStyle = (id) => {
-    database.customOrders.styleId = id
+    database.orderBuilder.styleId = id
 }
 
 
@@ -57,19 +58,19 @@ export let setStyle = (id) => {
 
 
 export const getMetals = () => {
-    return database.metals.map(metals => ({...metals}))
+    return database.metals.map(metal => ({...metal}))
 }
 
 export const getSizes = () => {
-    return database.sizes.map(sizes => ({...sizes}))
+    return database.sizes.map(size => ({...size}))
 }
 
 export const getStyles = () => {
-    return database.styles.map(styles => ({...styles}))
+    return database.styles.map(style => ({...style}))
 }
 
 export const getOrders = () => {
-    return database.customOrders.map(customOrders => ({...customOrders}))
+    return database.customOrders.map(order => ({...order}))
 }
 
 

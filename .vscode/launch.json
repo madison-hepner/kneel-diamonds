@@ -9,7 +9,17 @@
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "http://localhost:54275",
-            "webRoot": "${workspaceFolder}"
+            "url": "http://localhost:5000",
+            "webRoot": "${workspaceFolder}",
+            "configurations": [
+                {
+                    "name": "Launch Chrome",
+                    "request": "launch",
+                    "type": "pwa-chrome",
+                    "url": "http://localhost:5000",
+                    "webRoot": "${workspaceFolder}"
+                }
+            
+            ]
         }
 
