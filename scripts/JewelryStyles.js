@@ -5,7 +5,7 @@ const styles = getStyles()
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.name === "style") {
+        if (event.target.name === "styles") {
             setStyle(parseInt(event.target.value))
             // window.alert(`User chose style ${event.target.value}`)
         }

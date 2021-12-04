@@ -5,7 +5,7 @@ const metals = getMetals()
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.name === "metal") {
+        if (event.target.name === "metals") {
             setMetal(parseInt(event.target.value))
             // window.alert(`User chose metal ${event.target.value}`)
         }
@@ -28,4 +28,6 @@ export const Metals = () => {
     html += "</ul>"
     return html
 }
+
+
 

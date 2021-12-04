@@ -1,19 +1,25 @@
 /* You need to create the rest of styles for the layout shown */
 
 .options {
-    flex-basis: flex;
-    margin: 0 2rem;
+    margin: 0 1rem;
     border: 1px dashed dodgerblue;
     padding: 1.2rem;
     width: 125px;
-    height: 200px;
+    height: 180px;
     border-radius: 0.5rem;
     box-shadow: 0.25rem 0.25rem 0.5rem rgb(143, 143, 143);
 }
 
 .choices {
-    flex-basis: flex;
+    display: flex;
     flex-wrap: wrap;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
 }
 
+
+#types ul {
+    list-style: none;
+    margin: 1.5em;
+    padding: .1em;
+    display: inline-flex
+  }

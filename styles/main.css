@@ -19,13 +19,17 @@ h1,h2,h3,h4,h5,h6 {
   letter-spacing: 2px;
 }
 
+h2 {
+  margin-top: -1px;;
+}
+
 ul {
     list-style-type: none;
     padding-inline-start: 0.25rem;
 }
 
 #orderButton {
-    margin: 1rem 0 2rem 2rem;
+    margin: -.5rem 0 1rem 1rem;
     padding: 0.5rem;
     background-color: rgb(227, 72, 72);
     color: lightgoldenrodyellow;

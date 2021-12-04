@@ -7,7 +7,7 @@
 */
 const database = {
     orderBuilder: {},
-    
+
     styles: [
         { id: 1, style: "Classic", price: 500 },
         { id: 2, style: "Modern", price: 710 },
@@ -35,6 +35,13 @@ const database = {
             styleId: 3,
             timestamp: 1614659931693
         }
+    ],
+
+    types: [
+       { id: 1, type: "ring" },
+       { id: 2, type: "earring" },
+       { id: 3, type: "necklace" }
+
     ]
         
 }
@@ -51,6 +58,10 @@ export let setSize = (id) => {
 
 export let setStyle = (id) => {
     database.orderBuilder.styleId = id
+}
+
+export let setType = (id) => {
+    database.orderBuilder.typeId = id
 }
 
 
@@ -71,6 +82,10 @@ export const getStyles = () => {
 
 export const getOrders = () => {
     return database.customOrders.map(order => ({...order}))
+}
+
+export const getTypes = () => {
+    return database.types.map(type => ({...type}))
 }
 
 
@@ -96,5 +111,4 @@ export const addCustomOrder = () => {
     // Broadcast a notification that permanent state has changed
     document.dispatchEvent(new CustomEvent("stateChanged"))
 }
-
 
